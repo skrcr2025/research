@@ -1,0 +1,86 @@
+Typical powercenter on premise architecture with multiple domains and repositories. 
+
+The platform is an API-driven control plane that accepts declarative JSON pipeline definitions (datastores, datasets, pipelines). These definitions are translated into Apache Airflow DAGs for orchestration. The DAG tasks invoke Apache Spark workloads running on Kubernetes clusters, which perform the distributed data processing. This architecture separates pipeline definition, orchestration, and execution, enabling scalable and programmatic pipeline deployment.
+
+
+# Migration Requirement (In a Nutshell)
+
+The migration requires translating **PowerCenter workflows and their runtime behavior** into **declarative platform JSON definitions** that can be deployed through the target platform’s Control Plane APIs.
+
+These JSON artifacts must correctly represent:
+
+* **Datastores / Connections**
+* **Datasets (source and target definitions)**
+* **Pipelines (workflow orchestration logic)**
+
+Once deployed, the platform automatically converts these JSON definitions into **Airflow DAGs**, which orchestrate **Spark workloads running on Kubernetes**.
+
+---
+
+# What the Migration Must Achieve
+
+The migration must ensure that the following **PowerCenter execution behavior is preserved**:
+
+1. **Workflow orchestration logic**
+
+   * task sequencing
+   * dependencies
+   * control flow
+
+2. **Data processing logic**
+
+   * mapping transformations
+   * source-to-target logic
+
+3. **Runtime dependencies**
+
+   * connections
+   * datasets
+   * external systems
+
+4. **Runtime behavior**
+
+   * parameter-driven execution
+   * session overrides
+   * command tasks or external calls
+
+---
+
+# Core Migration Activities
+
+To achieve this, the migration requires:
+
+1. **Dependency extraction**
+
+   * connections
+   * parameter files
+   * environment configurations
+
+2. **Workflow structure extraction**
+
+   * tasks
+   * sessions
+   * orchestration logic
+
+3. **Transformation logic conversion**
+
+   * mappings → Spark-based transformations
+
+4. **Artifact generation**
+
+   * datastore JSON
+   * dataset JSON
+   * pipeline JSON
+
+5. **Deployment**
+
+   * publish artifacts through Control Plane APIs
+   * generate Airflow DAGs automatically
+
+---
+
+# One-Sentence Version
+
+The migration converts PowerCenter workflows and runtime dependencies into platform JSON artifacts that define datastores, datasets, and pipelines, which the Control Plane translates into Airflow DAGs executing Spark jobs on Kubernetes.
+
+
