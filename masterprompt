@@ -1,0 +1,173 @@
+You are tasked with designing a comprehensive migration factory tool that will be built using Claude's Agent team capabilities. This is a two-layer design challenge:
+
+1. **Layer 1 (Primary Focus)**: Design how a Claude Agent team will work together to BUILD the migration factory tool
+2. **Layer 2**: Design what the resulting tool will do (the migration factory capabilities)
+
+The Agent team will construct a production-ready tool capable of migrating large volumes of objects from PowerCenter on-premise to a target architecture. Once built, this tool will handle actual migration work independently.
+
+## Input Information
+
+Here is the current source architecture you'll be migrating FROM:
+
+<current_architecture>
+{{CURRENT_ARCHITECTURE}}
+</current_architecture>
+
+Here is the target architecture you'll be migrating TO:
+
+<target_architecture>
+{{TARGET_ARCHITECTURE}}
+</target_architecture>
+
+Here are the specific migration requirements and constraints:
+
+<migration_requirements>
+{{MIGRATION_REQUIREMENTS}}
+</migration_requirements>
+
+## Your Task
+
+Design a complete solution that includes:
+- How Claude Agent teams will collaborate to build the migration factory tool
+- What the resulting migration factory tool will be capable of doing
+- How the tool will handle thousands of objects systematically, efficiently, and with high quality
+
+## Instructions
+
+Before providing your final design, work through your planning process inside <analysis> tags in your thinking block:
+
+1. **Architectural Analysis**:
+   - List the key components and capabilities of the source architecture
+   - List the key components and capabilities of the target architecture
+   - Create a side-by-side comparison noting major differences
+   - Enumerate specific technical challenges and transformation gaps with concrete examples (e.g., "Source feature X has no direct equivalent in target, will need to use Y + Z combination")
+   - Identify dependencies and sequencing considerations
+
+2. **Agent Team Planning** (for building the tool):
+   - List out each specialized agent needed (e.g., Architecture Analyst Agent, Code Generator Agent, Testing Agent, etc.)
+   - For each agent, specify: what it will build, what inputs it needs, what outputs it produces, and which other agents it depends on or hands off to
+   - Map out the collaboration workflow showing the sequence of agent activities
+   - Define specific validation checkpoints where agents verify each other's work
+
+3. **Migration Factory Design** (what the tool will do):
+   - List the core components the migration factory needs (e.g., discovery module, transformation engine, validation framework, etc.)
+   - For each component, note its specific responsibilities and what it will automate
+   - Identify quality and consistency mechanisms needed at scale
+   - Define automation and validation strategies
+
+It's OK for this analysis section to be quite long, as you're working through a complex multi-layered design problem.
+
+After your analysis, provide your comprehensive design inside <migration_factory_design> tags, structured with the following sections:
+
+### 1. Executive Summary
+Brief overview of:
+- The migration challenge
+- The Agent team approach to building the tool
+- The resulting factory concept
+
+### 2. Claude Agent Team Architecture (for Tool Building)
+- **Agent Roles and Responsibilities**: Define each specialized agent (e.g., Requirements Agent, Architecture Agent, Code Generation Agent, Testing Agent, Integration Agent, Documentation Agent)
+- **Agent Collaboration Workflow**: How agents interact, sequence of work, handoffs between agents
+- **Tool Building Process**: Step-by-step process of how agents construct each component of the migration factory
+- **Quality Gates**: How agents validate each other's work during tool construction
+
+### 3. Migration Strategy (Tool Capabilities)
+- Overall migration approach (big bang vs phased, etc.)
+- Prioritization criteria for objects
+- Wave/batch planning strategy
+- How the tool will orchestrate migrations
+
+### 4. Factory Architecture (Tool Components)
+- Core components of the migration factory
+- Tools and technologies needed
+- Integration points with source and target systems
+- Data flow and processing pipelines
+
+### 5. Migration Process Workflows (Tool Capabilities)
+For each phase, specify inputs, activities, and outputs:
+- Discovery and assessment phase
+- Conversion/transformation phase
+- Testing and validation phase
+- Deployment phase
+- Rollback procedures
+
+### 6. Technical Mapping and Transformation Rules
+- How source objects map to target components
+- Transformation logic required
+- Handling of unsupported features
+- Metadata preservation strategy
+
+### 7. Automation and Tooling
+- What the tool will automate
+- Custom scripts and utilities needed
+- CI/CD integration approach
+- Monitoring and logging capabilities
+
+### 8. Quality Assurance and Testing Strategy
+- Validation approaches built into the tool
+- Testing types and coverage (unit, integration, reconciliation)
+- Acceptance criteria
+- Data validation mechanisms
+
+### 9. Risk Management
+- Key risks and mitigation strategies
+- Rollback procedures built into the tool
+- Contingency planning
+- Error handling and recovery
+
+### 10. Governance and Organization
+- Team structure for using the tool (not building it)
+- Communication plan
+- Change management approach
+- Training requirements
+
+### 11. Implementation Roadmap
+- **Phase A: Agent Team Tool Building**
+  - Milestones for tool construction
+  - Timeline estimates for building
+  - Success criteria for the tool
+- **Phase B: Tool Deployment and Migration Execution**
+  - Phases and milestones for actual migrations
+  - Timeline estimates
+  - Success metrics and KPIs
+
+## Output Format Example
+
+Your response should follow this structure:
+
+<analysis>
+[Your detailed thinking process covering:
+- Architectural differences and challenges
+- Agent team structure planning
+- Migration factory component planning
+- Dependencies and risks]
+</analysis>
+
+<migration_factory_design>
+
+## 1. Executive Summary
+[2-3 paragraphs summarizing the approach]
+
+## 2. Claude Agent Team Architecture (for Tool Building)
+
+### Agent Roles and Responsibilities
+[Table or list of agents with their specific responsibilities]
+
+### Agent Collaboration Workflow
+[Detailed workflow diagram or description]
+
+[Continue through all 11 sections with detailed content]
+
+</migration_factory_design>
+
+## Important Considerations
+
+- Be specific and practical in your recommendations
+- Distinguish clearly between what the Agent team does (builds the tool) vs what the tool does (performs migrations)
+- Consider scalability and maintainability
+- Address both technical and organizational aspects
+- Think about how agents will handle edge cases and errors during tool construction
+- Ensure the resulting tool can operate independently after being built
+- Include specific examples where helpful for clarity
+
+Your final output should consist only of the <migration_factory_design> content with all 11 sections fully developed. Do not duplicate or rehash the analysis work from your thinking block in the final design document.
